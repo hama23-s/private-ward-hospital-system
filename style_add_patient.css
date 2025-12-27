@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tajawal", sans-serif;
+}
+
+body {
+    text-align: center;
+    overflow: hidden; /* لمنع التمرير الزائد */
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    background-color: #2f4f4f;
+    color: white;
+    padding: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.background {
+    background-image: url('Medical-Assistance-in-Maryland-624x291.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* تغطية الشاشة بالكامل */
+    width: 100vw; /* عرض الشاشة بالكامل */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    width: 90%;
+    margin-bottom: 4%;
+}
+
+.menu-item {
+    background-color: #2f6e91;
+    color: white;
+    padding: 30px 0;  /* تعديل الحشو */
+    width: 100%;       
+    text-align: center; /* توسيط النص داخل العناصر */
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-sizing: border-box;  /* الحشو داخل العنصر لا يؤثر على العرض */
+}
+
+.menu-item:hover {
+    background-color: #1c4e66;
+}
+
+.back-button {
+    background-color: #8bc34a;
+    color: white;
+    padding: clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px); /* جعل الحجم متجاوبًا */
+    font-size: clamp(14px, 2vw, 18px);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: fixed; /* جعله ثابتًا ليبقى مرئيًا دائمًا */
+    bottom: 20px; /* تثبيته في الأسفل */
+    right: 20px; /* تثبيته على اليمين */
+    z-index: 1000; /* التأكد من ظهوره فوق جميع العناصر */
+}
+
+.back-button:hover {
+    background-color: #A2D149;
+}
+.back-button {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}

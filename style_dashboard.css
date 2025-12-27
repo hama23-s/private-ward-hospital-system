@@ -1,0 +1,182 @@
+/*الواجة الرئيسيه*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5ebde6; /* لون الخلفية */
+    text-align: center;
+    display: flex; /* لتوسيط المحتوى عموديًا وأفقيًا */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ملء الشاشة */
+    overflow: hidden; /* إخفاء أي محتوى زائد */
+}
+
+/* الترويسة */
+.header {
+    background-color: #003840;
+    display: flex;
+    justify-content: flex-start; /* لضبط العناصر في بداية الهيدر */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    gap: 40%; /* لتحديد المسافة بين الأزرار */
+}
+
+/* النص الذي داخل الترويسه*/
+.header .btn {
+    background-color: #8bc34a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0; /* لإزالة أي مسافات إضافية */
+}
+.left-buttons {
+    display: flex;
+    gap: 30px; /* مسافة بين الزرين */
+}
+.header .close-btn {
+    background-color: #e53935;
+    margin-right: 20%;
+}
+
+.header .btn:hover {
+    transform:scale(1.05) ;
+    background-color: #296700;
+}
+.header .close-btn:hover {
+    transform: scale(1.05);
+    background-color: #5e0101;
+}
+
+/* تصميم الوردة */
+.daisy-flower {
+    position: relative;
+    width: 400px; /* حجم الوردة */
+    height: 400px;
+    margin: 0 auto; /* مركز الوردة */
+}
+
+/* بتلات الوردة */
+.petal {
+    position: absolute;
+    top: 21%;
+    left: -60%;
+    width: 90px;
+    height: 170px;
+    background: white;
+    border-radius: 60px;
+    transform-origin: center bottom;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 0.5px solid rgb(48, 48, 48); /* إطار أسود حول البتلات */
+}
+
+/* ترتيب البتلات */
+.petal:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg); }
+.petal:nth-child(2) { transform: translate(-50%, -50%) rotate(30deg); }
+.petal:nth-child(3) { transform: translate(-50%, -50%) rotate(60deg); }
+.petal:nth-child(4) { transform: translate(-50%, -50%) rotate(90deg); }
+.petal:nth-child(5) { transform: translate(-50%, -50%) rotate(120deg); }
+.petal:nth-child(6) { transform: translate(-50%, -50%) rotate(150deg); }
+.petal:nth-child(7) { transform: translate(-50%, -50%) rotate(180deg); }
+.petal:nth-child(8) { transform: translate(-50%, -50%) rotate(210deg); }
+.petal:nth-child(9) { transform: translate(-50%, -50%) rotate(240deg); }
+.petal:nth-child(10) { transform: translate(-50%, -50%) rotate(270deg); }
+.petal:nth-child(11) { transform: translate(-50%, -50%) rotate(300deg); }
+.petal:nth-child(12) { transform: translate(-50%, -50%) rotate(330deg); }
+
+/* مركز الوردة */
+.center {
+    position: absolute;
+    top: 42%;
+    left: -60%;
+    width: 140px;
+    height: 140px;
+    background-image: url('334119472020_39377266.jpg'); /* شعار المستشفى */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* معلومات المستشفى */
+.hospital-info {
+    color: #f6f7f8; /* لون النص */
+    font-size: 40px; /* حجم النص */
+    line-height: 1.5; /* لتحسين المسافات بين السطور */
+    position: absolute; /* لإتاحة التحكم بموقع النص */
+    top: 45%; /* تحديد موقع النص بالنسبة للجزء العلوي من الشاشة */
+    left: 65%; /* تحديد موقع النص بالنسبة لمنتصف الشاشة */
+    transform: translate(-50%, -50%); /* لتوسيط النص أفقياً وعمودياً */
+    text-align: center;
+    padding: 10px;
+    width: 90%; /* عرض النص للتحكم في المساحة */
+}
+
+/* نص متجاوب */
+.hospital-info span {
+    font-size: 16px; /* حجم النص داخل المستشفى */
+}
+
+/* القائمة */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    position: absolute; /* لإتاحة التحكم بموقع*/
+    top: 84%; /* تحديد موقع  بالنسبة للجزء العلوي من الشاشة */
+    left: -5%; 
+    right: -5%;
+}
+/* العناصر*/
+.menu-item {
+    width: 120px;
+    text-align: center;
+    background-color: #003840;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    background-color: #005067;
+}
+/* العناصر الفارغة */
+.menu-item.wider {
+    width: 400px; 
+    height: 85px; 
+    background-color: #003840; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+}
+
+/* منع التكبير للعنصر wider */
+.menu-item.wider:hover {
+    transform: none; 
+
+}
+
+.menu-icon {
+    width: 50px; /* عرض الصورة */
+    height: 50px; /* ارتفاع الصورة */
+    margin-bottom: 10px;
+    border-radius: 10px; /* زوايا مستديرة للصورة */
+    object-fit: cover; /* لملء الصورة داخل الإطار */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+}
+
+/* النص داخل المنيو*/
+.menu-item p {
+    font-size: 18px;
+    color: #f2f4f5;
+    margin: 0;
+}
